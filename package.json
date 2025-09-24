@@ -2,6 +2,7 @@
   "name": "vite-react-typescript-starter",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://andy2208070.github.io/simple-three-js-demo",
   "type": "module",
   "scripts": {
     "dev": "vite",
