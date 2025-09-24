@@ -5,7 +5,7 @@ import TeapotDemo from './pages/demo2/demo2';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/simple-three-js-demo'>
       <div className="App">
         <nav>
           <Link to="/demo1">Demo 1</Link> | 
