@@ -4,14 +4,14 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { TeapotGeometry } from 'three/examples/jsm/geometries/TeapotGeometry.js';
 import Stats from 'three/examples/jsm/libs/stats.module.js';
 
-// function Demo2() {
-//   return (
-//     <div>
-//       <h2>Demo 2 Page</h2>
-//       <p>This is the Demo 2 content</p>
-//     </div>
-//   );
-// }
+function Demo2() {
+  return (
+    <div>
+      <h2>Demo 2 Page</h2>
+      <p>This is the Demo 2 content</p>
+    </div>
+  );
+}
 
 const TeapotScene: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
