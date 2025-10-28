@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { VertexNormalsHelper } from 'three/examples/jsm/helpers/VertexNormalsHelper.js';
 import { VertexTangentsHelper } from 'three/examples/jsm/helpers/VertexTangentsHelper.js';
+import { Button } from 'antd';
 
 // function Demo1() {
 //   return (
@@ -160,6 +161,10 @@ const ThreeScene: React.FC = () => {
       href='https://github.com/mrdoob/three.js/blob/master/examples/webgl_helpers.html'
       target='_blank'
       >WEB SITE</a>
+      <Button type="link"
+      href='https://threejs.org/examples/webgl_lightprobe_cubecamera.html'
+      target='_blank'
+      > Web Preview</Button>
       <div
         id="info"
         style={{

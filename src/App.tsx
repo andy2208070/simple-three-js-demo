@@ -1,24 +1,26 @@
 // import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Demo1 from './pages/demo1/demo1';
-import TeapotDemo from './pages/demo2/demo2';
+// import Demo1 from './pages/demo1/demo1';
+// import TeapotDemo from './pages/demo2/demo2';
+import { BrowserRouter, /*Routes, Route, Link,*/ useRoutes } from 'react-router-dom';
+import { routesConfig } from './utils/routes';
+import { Suspense } from 'react';
+import AppLayout from './components/AppLayout';
+
+function AppRouteContent () {
+  const routes = useRoutes(routesConfig);
+  return (
+    <AppLayout>
+      <Suspense fallback={<div className="p-8 text-center">載入中...</div>}>
+        {routes}
+      </Suspense>
+    </AppLayout>
+  );
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <div style={{ marginTop: '50px' }}>
-          <nav>
-            <Link to="/demo1">Demo 1</Link> | 
-            <Link to="/demo2">Teapot</Link>
-          </nav>
-        </div>
-        <Routes>
-          <Route path="/demo1" element={<Demo1 />} />
-          <Route path="/demo2" element={<TeapotDemo />} />
-          <Route path="/" element={<TeapotDemo />} />
-        </Routes>
-      </div>
+      <AppRouteContent />
     </BrowserRouter>
   );
 }
