@@ -7,10 +7,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <nav>
-          <Link to="/demo1">Demo 1</Link> | 
-          <Link to="/demo2">Teapot</Link>
-        </nav>
+        <div style={{ marginTop: '50px' }}>
+          <nav>
+            <Link to="/demo1">Demo 1</Link> | 
+            <Link to="/demo2">Teapot</Link>
+          </nav>
+        </div>
         <Routes>
           <Route path="/demo1" element={<Demo1 />} />
           <Route path="/demo2" element={<TeapotDemo />} />
